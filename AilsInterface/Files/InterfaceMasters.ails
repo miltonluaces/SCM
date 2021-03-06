@@ -1,0 +1,56 @@
+--INTERFACE MASTERS
+--------------------
+
+
+TEST 0 : Conectividad
+SELECT code FROM AilParameter
+SELECT TOP 5 No_ FROM ASTURIANO.dbo.COORPORACION_EL_ASTURIANO$Item
+
+JOB 0 : Borrado total 
+DELETE FROM AILogSys.dbo.AilDemand
+DELETE FROM AILogSys.dbo.AilSku
+DELETE FROM AILogSys.dbo.AilProduct
+DELETE FROM AILogSys.dbo.AilNode WHERE code <> 'CEDIS'
+DELETE FROM AILogSys.dbo.AilSupplier
+
+COUNT 0 : Verificacion total
+SELECT supplierId FROM AILogSys.dbo.AilSupplier
+SELECT productId FROM AILogSys.dbo.AilProduct
+SELECT nodeId FROM AILogSys.dbo.AilNode
+SELECT skuId FROM AILogSys.dbo.AilSku
+SELECT demandId FROM AILogSys.dbo.AilDemand
+
+JOB 1 : Insercion de Proveedores
+INSERT INTO AILogSys.dbo.AilSupplier (code, name, address, city, phone, creation) SELECT DISTINCT [Vendor No_] = CASE WHEN [Vendor No_]='' THEN 'GEN' ELSE [Vendor No_] END, [Vendor No_] = CASE WHEN [Vendor No_]='' THEN 'GENERICO' ELSE [Vendor No_] END, '', 'Queretaro', '', '2015-1-1' FROM ASTURIANO.dbo.COORPORACION_EL_ASTURIANO$Item WHERE CASE WHEN [Vendor No_]='' THEN 'GEN' ELSE [Vendor No_] END NOT IN (SELECT code FROM AILogSys.dbo.AilSupplier) 
+
+COUNT 1 : Verificacion Proveedores 
+SELECT supplierId FROM AILogSys.dbo.AilSupplier
+
+JOB 2 : Update del Maestro de Productos
+UPDATE AILogSys.dbo.AilProduct SET code = ASTURIANO.dbo.COORPORACION_EL_ASTURIANO$Item.No_, descr = ASTURIANO.dbo.COORPORACION_EL_ASTURIANO$Item.Description, cost = ASTURIANO.dbo.COORPORACION_EL_ASTURIANO$Item.[Last Direct Cost], uStr1 = [Vendor No_], supplierCode = ASTURIANO.dbo.COORPORACION_EL_ASTURIANO$Item.[Vendor No_], unit = ASTURIANO.dbo.COORPORACION_EL_ASTURIANO$Item.[Base Unit of Measure], category = ASTURIANO.dbo.COORPORACION_EL_ASTURIANO$Item.[Item Category Code], groupp = ASTURIANO.dbo.COORPORACION_EL_ASTURIANO$Item.[Product Group Code], division = ASTURIANO.dbo.COORPORACION_EL_ASTURIANO$Item.[Division Code], creation = ASTURIANO.dbo.COORPORACION_EL_ASTURIANO$Item.[Last Date Modified] FROM ASTURIANO.dbo.COORPORACION_EL_ASTURIANO$Item INNER JOIN  AILogSys.dbo.AilProduct ON AILogSys.dbo.AilProduct.code = ASTURIANO.dbo.COORPORACION_EL_ASTURIANO$Item.No_ AND ASTURIANO.dbo.COORPORACION_EL_ASTURIANO$Item.[Last Date Modified] > '2012-1-1';
+--Insercion de nuevos productos Maestro de Productos
+INSERT INTO AILogSys.dbo.AilProduct (code, descr, cost, price, uStr1, supplierCode, unit, category, groupp, division, creation) SELECT No_, description, [Last Direct Cost], [Unit Price], CASE WHEN [Vendor No_]='' THEN 'GEN' ELSE [Vendor No_] END, [Vendor Item No_], [Base Unit of Measure], [Item Category Code], [Product Group Code], [Division Code], [Last Date Modified] FROM ASTURIANO.dbo.COORPORACION_EL_ASTURIANO$Item WHERE No_ NOT IN (SELECT code FROM AILogSys.dbo.AilProduct) 
+UPDATE AILogSys.dbo.AilProduct SET supplierId = (SELECT supplierId FROM AILogSys.dbo.AilSupplier WHERE AILogSys.dbo.AilSupplier.Code = AILogSys.dbo.AilProduct.UStr1)
+
+COUNT 2 : Verificacion Productos
+SELECT productId FROM AILogSys.dbo.AilProduct
+
+JOB 3 : Insercion de nuevas Tiendas
+INSERT INTO AILogSys.dbo.AilNode(code, descr, topOrder, schLevel, aggrHist, aggrFcst, creation, calendarId, rootNodeId) SELECT No_, Name, 0, 1, 1, 0, [Last Date Modified], 1, 451 FROM ASTURIANO.dbo.COORPORACION_EL_ASTURIANO$Store WHERE No_ NOT IN (SELECT code FROM AILogSys.dbo.AilNode) 
+
+COUNT 3 : Verificacion Tiendas 
+SELECT nodeId FROM AILogSys.dbo.AilNode
+
+JOB 4 : Creacion de Skus
+INSERT INTO AILogSys.dbo.AilSku(productId, nodeId, code, supplierId, supplierCalId, creation) SELECT p.productId, n.nodeId, CONCAT(p.code, ' - ', n.code), p.supplierId, 1, '2015-1-1'  FROM AILogSys.dbo.AilProduct p CROSS JOIN AILogSys.dbo.AilNode n WHERE CONCAT(p.code, ' - ', n.code) NOT IN (SELECT code FROM AILogSys.dbo.AilSku) ;
+--DELETE FROM AILogSys.dbo.AilSku
+UPDATE AILogSys.dbo.AilSku SET rsmpFirstDate = '2012-1-1', serviceLevel =  95, leadTime = 7, replenishmentTime = 15, lotSize = 1, roundingQty = 1, isPeriodFixed = 1, planJustCustOrders = 0, planningRule = 1, policy = 1, rsmpFilteringProb = 98, rsmpNoise = 0.1, stock = 100, bomLevel = 0, firstSellingDate = '2013-5-1', lastSupplyDate = '2020-1-1', rsmpRollingFcstHist = 100, leadTimeFcstOrigin = 1, cost = 5, volume = 3, predictable = 1, fcstHorizon = 15;
+--SELECT * FROM AILogSys.dbo.AilSku
+
+COUNT 4 : Verificacion total 
+SELECT supplierId FROM AILogSys.dbo.AilSupplier
+SELECT productId FROM AILogSys.dbo.AilProduct
+SELECT nodeId FROM AILogSys.dbo.AilNode
+SELECT skuId FROM AILogSys.dbo.AilSku
+
+

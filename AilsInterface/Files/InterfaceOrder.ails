@@ -1,0 +1,18 @@
+--INTERFACE ORDER
+--------------------
+
+
+--USE ErpData
+
+
+--JOB Insercion Global de Ordenes confirmadas
+--INSERT INTO AILogSys.dbo.AilOrder (orderId, code, desiredDate, initialQty, actualQty, orderPrice, orderId, lineId, customerId, skuId, productId, nodeId, creation) SELECT  erpOrderId, '', dmdDate, qty, qty, 0, 0, 0, 1, -1, productId, nodeId, creation  FROM ERPData.dbo.ErpOrder
+
+--USE AILogSys
+
+--JOB Update de SkuIds de Nuevas Ordenes
+--UPDATE AILogSys.dbo.AilDemand SET skuId = (SELECT  AILogSys.dbo.AilSku.skuId FROM AILogSys.dbo.AilSku WHERE AILogSys.dbo.AilSku.productId = AILogSys.dbo.AilDemand.productId AND AILogsys.dbo.AilSku.nodeId = AILSDemo.dbo.IfsDemand.nodeId) WHERE EXISTS (SELECT  AILogSys.dbo.AilSku.skuId FROM AILogSys.dbo.AilSku WHERE AILogSys.dbo.AilSku.productId = AILogSys.dbo.AilDemand.productId AND AILogSys.dbo.AilSku.nodeId = AILogSys.dbo.AilDemand.nodeId)
+--SELECT s.skuId FROM AILogSys.dbo.IfsSku s, AILogSys.dbo.IfsDemand d WHERE d.productId = s.productId AND d.nodeId = s.nodeId ORDER BY skuId
+
+--JOB Insercion de los Nuevos Skus
+--INSERT INTO AILogSys.dbo.AilSku (productId, nodeId) SELECT productId, nodeId FROM AILogSys.dbo.AilDemand WHERE skuId = -1;

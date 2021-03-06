@@ -1,0 +1,6 @@
+--INTERFACE STOCK
+--------------------
+
+
+--JOB Update del Stock
+--UPDATE AILogsys.dbo.AilSku SET stock = ERPData.dbo.ErpStock.stock, creation = ERPData.dbo.ErpStock.updated FROM ErpData.dbo.ErpStock INNER JOIN  AILogsys.dbo.AilSku ON AILogSys.dbo.AilSku.productId = ErpData.dbo.ErpStock.productId AND AILogSys.dbo.AilSku.nodeId = ErpData.dbo.ErpStock.nodeId AND updated > '2012-1-1';

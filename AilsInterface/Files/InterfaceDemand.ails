@@ -1,0 +1,11 @@
+--INTERFACE DEMAND SQLSERVER
+----------------------------
+
+JOB 1 : Insercion de Ventas
+INSERT INTO AILogSys.dbo.AilDemand(code, desiredDate, initialQty, actualQty, orderPrice, orderCode, lineCode, customerId, skuId, creation, productCode, nodeCode) SELECT barcode, fecha, -quantity, -quantity, 0, pos_terminal, ticket, 1, defaultSkuId, '2015-01-01', item, store FROM ASTURIANO.dbo.trans_sales WHERE fecha > lastClosure
+
+JOB 2 : Completar Skus de Demandas
+UPDATE AILogSys.dbo.AilDemand SET skuId = (SELECT skuId FROM AILogSys.dbo.AilSku WHERE code = CONCAT(productCode, ' - ', nodeCode)) WHERE desiredDate > lastClosure
+
+COUNT 1 : Verificacion Ventas 
+SELECT demandId FROM AILogSys.dbo.AilDemand

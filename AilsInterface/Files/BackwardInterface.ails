@@ -1,0 +1,9 @@
+--BACKWARD INTERFACE
+--------------------
+
+CONN 1 : AsturCedis
+AsturCedis
+
+JOB 1 :	Ordenes de Compra
+INSERT INTO areas(clave, nombre) SELECT nodeCode, productCode FROM AilPuOrder
+
