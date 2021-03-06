@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{ECA94105-99F1-4711-87B5-2CBEDD27BB20}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MonteCarlo</RootNamespace>
+    <AssemblyName>aiue</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Convolutions\ConvCalculator.cs" />
+    <Compile Include="Convolutions\ConvProbCalc.cs" />
+    <Compile Include="Convolutions\MonteCarloConv.cs" />
+    <Compile Include="Convolutions\MonteCarloGenericConv.cs" />
+    <Compile Include="Convolutions\Convolution.cs" />
+    <Compile Include="Convolutions\CombinatoryConv.cs" />
+    <Compile Include="Convolutions\NormalConv.cs" />
+    <Compile Include="SignalProcessing\DaubechiesWav.cs" />
+    <Compile Include="SignalProcessing\FastFourierTransf.cs" />
+    <Compile Include="SignalProcessing\FFT.cs" />
+    <Compile Include="SignalProcessing\SignalProc.cs" />
+    <Compile Include="SignalProcessing\Wavelets.cs" />
+    <Compile Include="SignalProcessing\SignalCharact.cs" />
+    <Compile Include="Simulation\SimAlg.cs" />
+    <Compile Include="Simulation\JacknifeEstimation.cs" />
+    <Compile Include="Simulation\ObsCalc.cs" />
+    <Compile Include="Simulation\Sample.cs" />
+    <Compile Include="Simulation\KernelDist.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Simulation\SimFcst.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Maths\Maths.csproj">
+      <Project>{79A3EC04-2FC6-4F04-81A4-68FFD42A996F}</Project>
+      <Name>Maths</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Statistics\Statistics.csproj">
+      <Project>{E0AA09C8-DB29-46CF-9457-0A6230B876AA}</Project>
+      <Name>Statistics</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Assessment\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
