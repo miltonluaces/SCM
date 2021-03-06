@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9E99E77D-06C0-467F-81BB-C9D50831CC98}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MachineLearning</RootNamespace>
+    <AssemblyName>aiup</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DynamicInterop">
+      <HintPath>..\..\External\RDotNet\DynamicInterop.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="RDotNet">
+      <HintPath>..\..\External\RDotNet\RDotNet.dll</HintPath>
+    </Reference>
+    <Reference Include="RDotNet.NativeLibrary">
+      <HintPath>..\..\External\RDotNet\RDotNet.NativeLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DlmSmc\DLM.cs" />
+    <Compile Include="DlmSmc\ModelDesign.cs" />
+    <Compile Include="DlmSmc\StatFcst.cs" />
+    <Compile Include="GeneticAlgorithms\Crom.cs" />
+    <Compile Include="GeneticAlgorithms\GeneticAlg.cs" />
+    <Compile Include="GeneticAlgorithms\Population.cs" />
+    <Compile Include="NeuralNetworks\FFNN.cs" />
+    <Compile Include="NeuralNetworks\Predictability.cs" />
+    <Compile Include="NeuralNetworks\Neuron.cs" />
+    <Compile Include="NeuralNetworks\RNN.cs" />
+    <Compile Include="NeuralNetworks\SupFcst.cs" />
+    <Compile Include="NeuralNetworks\TDNNFcst.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RAlgorithms\NNForecasting.cs" />
+    <Compile Include="RAlgorithms\NNMForecasting.cs" />
+    <Compile Include="RAlgorithms\NNMultiRegression.cs" />
+    <Compile Include="RAlgorithms\RFunctions.cs" />
+    <Compile Include="RAlgorithms\RNetFunctions.cs" />
+    <Compile Include="RAlgorithms\RNNet.cs" />
+    <Compile Include="SearchAlgorithms\Backtracking.cs" />
+    <Compile Include="SearchAlgorithms\Greedy.cs" />
+    <Compile Include="SearchAlgorithms\MonteCarlo.cs" />
+    <Compile Include="SearchAlgorithms\SearchAlg.cs" />
+    <Compile Include="Misc\UnsatifiedDmd.cs" />
+    <Compile Include="StatisticForecast\StatForecast.cs" />
+    <Compile Include="StatisticForecast\DLModel.cs" />
+    <Compile Include="StatisticForecast\TSeries.cs" />
+    <Compile Include="StatisticForecast\DLMParameter.cs" />
+    <Compile Include="StatisticForecast\ParSelector.cs" />
+    <Compile Include="StatisticForecast\CandidatePars.cs" />
+    <Compile Include="StatisticForecast\ParEvaluator.cs" />
+    <Compile Include="SupVecMachines\Cache.cs" />
+    <Compile Include="SupVecMachines\GaussianTransform.cs" />
+    <Compile Include="SupVecMachines\IRangeTransform.cs" />
+    <Compile Include="SupVecMachines\Kernel.cs" />
+    <Compile Include="SupVecMachines\Model.cs" />
+    <Compile Include="SupVecMachines\Node.cs" />
+    <Compile Include="SupVecMachines\Parameter.cs" />
+    <Compile Include="SupVecMachines\ParameterSelection.cs" />
+    <Compile Include="SupVecMachines\PerformanceEvaluator.cs" />
+    <Compile Include="SupVecMachines\PrecomputedKernel.cs" />
+    <Compile Include="SupVecMachines\Prediction.cs" />
+    <Compile Include="SupVecMachines\Problem.cs" />
+    <Compile Include="SupVecMachines\RangeTransform.cs" />
+    <Compile Include="SupVecMachines\Scaling.cs" />
+    <Compile Include="SupVecMachines\Solver.cs" />
+    <Compile Include="SupVecMachines\SupportClass.cs" />
+    <Compile Include="SupVecMachines\SVMExtensions.cs" />
+    <Compile Include="SupVecMachines\TemporaryCulture.cs" />
+    <Compile Include="SupVecMachines\Training.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Maths\Maths.csproj">
+      <Project>{79a3ec04-2fc6-4f04-81a4-68ffd42a996f}</Project>
+      <Name>Maths</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MonteCarlo\MonteCarlo.csproj">
+      <Project>{eca94105-99f1-4711-87b5-2cbedd27bb20}</Project>
+      <Name>MonteCarlo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Statistics\Statistics.csproj">
+      <Project>{e0aa09c8-db29-46cf-9457-0a6230b876aa}</Project>
+      <Name>Statistics</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
