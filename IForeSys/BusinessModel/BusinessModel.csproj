@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3D07A898-F7C0-460E-9366-AD7B632D3E1D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AibuSet</RootNamespace>
+    <AssemblyName>aibu</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="aime">
+      <HintPath>..\Lib\aime.dll</HintPath>
+    </Reference>
+    <Reference Include="aiud">
+      <HintPath>..\Lib\aiud.dll</HintPath>
+    </Reference>
+    <Reference Include="FirebirdSql.Data.FirebirdClient">
+      <HintPath>..\Lib\FirebirdSql.Data.FirebirdClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zip">
+      <HintPath>..\Lib\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Abstract classes\ITTItem.cs" />
+    <Compile Include="Business Entities\SubSku.cs" />
+    <Compile Include="Calculation structures\FcstModel.cs" />
+    <Compile Include="Calculation structures\FcstOverrideCalc.cs" />
+    <Compile Include="Calculation structures\Process.cs" />
+    <Compile Include="Calculation structures\Results.cs" />
+    <Compile Include="Persistence\BrkrFcstModel.cs" />
+    <Compile Include="Persistence\BrkrProcess.cs" />
+    <Compile Include="Persistence\BrkrSubSku.cs" />
+    <Compile Include="Persistence\BrkrTrOrder.cs" />
+    <Compile Include="Persistence\BrkrUser.cs" />
+    <Compile Include="Business Entities\BomDemand.cs" />
+    <Compile Include="Business Entities\BomRelation.cs" />
+    <Compile Include="Calculation structures\Plan.cs" />
+    <Compile Include="Calculation structures\FcstOverride.cs" />
+    <Compile Include="Business Entities\BinLargeObj.cs" />
+    <Compile Include="Calculation structures\SupplyChain.cs" />
+    <Compile Include="Persistence\BrkrBinLargeObj.cs" />
+    <Compile Include="Persistence\DBGen.cs" />
+    <Compile Include="Persistence\DbMigrator.cs" />
+    <Compile Include="Persistence\FBMigrator.cs" />
+    <Compile Include="Persistence\MigraTool.cs" />
+    <Compile Include="Persistence\Pager.cs" />
+    <Compile Include="Persistence\ScriptRunner.cs" />
+    <Compile Include="Persistence\SysEnvironment.cs" />
+    <Compile Include="Abstract classes\IResults.cs" />
+    <Compile Include="Calculation structures\SimFcstDist.cs" />
+    <Compile Include="Calculation structures\TimeSeries.cs" />
+    <Compile Include="Abstract classes\Agent.cs" />
+    <Compile Include="Calculation structures\Parameter.cs" />
+    <Compile Include="Persistence\BrkrBomDemand.cs" />
+    <Compile Include="Persistence\BrkrBomRelation.cs" />
+    <Compile Include="Persistence\BrkrCalendar.cs" />
+    <Compile Include="Persistence\BrkrCustomer.cs" />
+    <Compile Include="Persistence\BrkrDemand.cs" />
+    <Compile Include="Persistence\BrkrFcstOverride.cs" />
+    <Compile Include="Persistence\BrkrMgr.cs" />
+    <Compile Include="Persistence\BrkrNode.cs" />
+    <Compile Include="Persistence\BrkrParameter.cs" />
+    <Compile Include="Persistence\BrkrPlan.cs" />
+    <Compile Include="Persistence\BrkrPuOrder.cs" />
+    <Compile Include="Persistence\BrkrProduct.cs" />
+    <Compile Include="Persistence\BrkrRelation.cs" />
+    <Compile Include="Persistence\BrkrSimFcstDist.cs" />
+    <Compile Include="Persistence\BrkrSku.cs" />
+    <Compile Include="Persistence\BrkrSupplier.cs" />
+    <Compile Include="Persistence\BrkrSupply.cs" />
+    <Compile Include="Persistence\BrkrTimeSeries.cs" />
+    <Compile Include="Persistence\Broker.cs" />
+    <Compile Include="Abstract classes\BusObject.cs" />
+    <Compile Include="Calculation structures\Calendar.cs" />
+    <Compile Include="Business Entities\Customer.cs" />
+    <Compile Include="Persistence\DBJob.cs" />
+    <Compile Include="Persistence\DbObject.cs" />
+    <Compile Include="Business Entities\Demand.cs" />
+    <Compile Include="Abstract classes\Item.cs" />
+    <Compile Include="Business Entities\Node.cs" />
+    <Compile Include="Abstract classes\Note.cs" />
+    <Compile Include="Business Entities\PuOrder.cs" />
+    <Compile Include="Calculation structures\Policy.cs" />
+    <Compile Include="Business Entities\Product.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Business Entities\Relation.cs" />
+    <Compile Include="Business Entities\Sku.cs" />
+    <Compile Include="Business Entities\Supplier.cs" />
+    <Compile Include="Business Entities\Supply.cs" />
+    <Compile Include="Business Entities\TrOrder.cs" />
+    <Compile Include="Utilities\Config.cs" />
+    <Compile Include="Utilities\HcReader.cs" />
+    <Compile Include="Utilities\Reporting.cs" />
+    <Compile Include="Utilities\RSAGen.cs" />
+    <Compile Include="Utilities\TestBusinessObjGenerator.cs" />
+    <Compile Include="Business Entities\User.cs" />
+    <Compile Include="Utilities\FTP.cs" />
+    <Compile Include="Utilities\Mailer.cs" />
+    <Compile Include="Utilities\SysUpdate.cs" />
+    <Compile Include="Utilities\Zipper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
