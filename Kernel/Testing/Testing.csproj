@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B0D025BA-9008-473F-A2CA-C54E009F9879}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Testing</RootNamespace>
+    <AssemblyName>Testing</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GenRCode.cs" />
+    <Compile Include="TestRFunctions.cs" />
+    <Compile Include="TestDF.cs" />
+    <Compile Include="TestDLMSCM.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestFcst.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TestNNForecasting.cs" />
+    <Compile Include="TestOrderGenMax.cs" />
+    <Compile Include="TestTS.cs" />
+    <Compile Include="TestNNForecasting2.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MachineLearning\MachineLearning.csproj">
+      <Project>{9e99e77d-06c0-467f-81bb-c9d50831cc98}</Project>
+      <Name>MachineLearning</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Maths\Maths.csproj">
+      <Project>{79a3ec04-2fc6-4f04-81a4-68ffd42a996f}</Project>
+      <Name>Maths</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MonteCarlo\MonteCarlo.csproj">
+      <Project>{eca94105-99f1-4711-87b5-2cbedd27bb20}</Project>
+      <Name>MonteCarlo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Planning\Planning.csproj">
+      <Project>{c17e8870-d925-4b8a-941a-80fe01e1e405}</Project>
+      <Name>Planning</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Statistics\Statistics.csproj">
+      <Project>{e0aa09c8-db29-46cf-9457-0a6230b876aa}</Project>
+      <Name>Statistics</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
