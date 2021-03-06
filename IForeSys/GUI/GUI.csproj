@@ -1,0 +1,1186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DFA87A88-0C2A-4CD8-87A0-0D0B3FE61E5A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GUI</RootNamespace>
+    <AssemblyName>AILogSys</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publicar\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="aime">
+      <HintPath>..\Lib\aime.dll</HintPath>
+    </Reference>
+    <Reference Include="aish, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\aish.dll</HintPath>
+    </Reference>
+    <Reference Include="aiud">
+      <HintPath>..\Lib\aiud.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Charts.Designer.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v15.1.Core, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Data.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.DataAccess.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.ExpressApp.Reports.Win.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.ReportsV2.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.ReportsV2.Web.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.ReportsV2.Win.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Office.v15.1.Core, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Pdf.v15.1.Core, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v15.1.Core, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Snap.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Snap.v15.1.Core, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Snap.v15.1.Extensions, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Spreadsheet.v15.1.Core, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v15.1.UI, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Xpo.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v15.1.Extensions, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v15.1.UI, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v15.1.Web, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v15.1.Wizard, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraMap.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Pdf.v15.1.Drawing, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraPdfViewer.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraPivotGrid.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v15.1.Core, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v15.1.Core, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Sparkline.v15.1.Core, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v15.1.Extensions, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Printing.v15.1.Service, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v15.1.Service, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v15.1.Web, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v15.1.Extensions, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v15.1.Core, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v15.1.Extensions, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v15.1.Reporting, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v15.1.Reporting.Extensions, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraSpreadsheet.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraVerticalGrid.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraWizard.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="FirebirdSql.Data.FirebirdClient">
+      <HintPath>..\packages\FirebirdSql.Data.FirebirdClient.4.6.1.0\lib\net40-client\FirebirdSql.Data.FirebirdClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Printing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\1. Analysis\IfsOrderTimetable.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\1. Analysis\IfsOrderTimetable.Designer.cs">
+      <DependentUpon>IfsOrderTimetable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\1. Analysis\IfsSubSkusCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\1. Analysis\IfsSubSkusCtrl.Designer.cs">
+      <DependentUpon>IfsSubSkusCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\5. Admin\IfsDBImportCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\5. Admin\IfsDBImportCtrl.Designer.cs">
+      <DependentUpon>IfsDBImportCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\2. Planning\DialogFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\2. Planning\DialogFrm.Designer.cs">
+      <DependentUpon>DialogFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\5. Admin\IfsOrderTimetableCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\5. Admin\IfsOrderTimetableCtrl.Designer.cs">
+      <DependentUpon>IfsOrderTimetableCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\6. Helpers\CellInfoFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\6. Helpers\CellInfoFrm.Designer.cs">
+      <DependentUpon>CellInfoFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\6. Helpers\MailFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\6. Helpers\MailFrm.Designer.cs">
+      <DependentUpon>MailFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\6. Helpers\SpSheetFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\6. Helpers\SpSheetFrm.Designer.cs">
+      <DependentUpon>SpSheetFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\5. Admin\DBImportFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\5. Admin\DBImportFrm.Designer.cs">
+      <DependentUpon>DBImportFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\5. Admin\AboutFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\5. Admin\AboutFrm.Designer.cs">
+      <DependentUpon>AboutFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\1. Analysis\IfsSimFcstCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\1. Analysis\IfsSimFcstCtrl.Designer.cs">
+      <DependentUpon>IfsSimFcstCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\3. Monitor\IfsAdvRepCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\3. Monitor\IfsAdvRepCtrl.Designer.cs">
+      <DependentUpon>IfsAdvRepCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\5. Admin\IfsBackupCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\5. Admin\IfsBackupCtrl.Designer.cs">
+      <DependentUpon>IfsBackupCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\2. Planning\IfsProcControlCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\2. Planning\IfsProcControlCtrl.Designer.cs">
+      <DependentUpon>IfsProcControlCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\1. General and Analysis\AnalysisFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\1. General and Analysis\AnalysisFrm.Designer.cs">
+      <DependentUpon>AnalysisFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\5. Admin\BackupFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\5. Admin\BackupFrm.Designer.cs">
+      <DependentUpon>BackupFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\5. Admin\DataViewFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\5. Admin\DataViewFrm.Designer.cs">
+      <DependentUpon>DataViewFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\5. Admin\CalendarFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\5. Admin\CalendarFrm.Designer.cs">
+      <DependentUpon>CalendarFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\5. Admin\DataBasesFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\5. Admin\DataBasesFrm.Designer.cs">
+      <DependentUpon>DataBasesFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\5. Admin\BomListFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\5. Admin\BomListFrm.Designer.cs">
+      <DependentUpon>BomListFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\4. Tools\BudgetFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\4. Tools\BudgetFrm.Designer.cs">
+      <DependentUpon>BudgetFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\4. Tools\ClassifFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\4. Tools\ClassifFrm.Designer.cs">
+      <DependentUpon>ClassifFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\4. Tools\ElastFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\4. Tools\ElastFrm.Designer.cs">
+      <DependentUpon>ElastFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\4. Tools\AnalogFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\4. Tools\AnalogFrm.Designer.cs">
+      <DependentUpon>AnalogFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\4. Tools\FactorsFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\4. Tools\FactorsFrm.Designer.cs">
+      <DependentUpon>FactorsFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\3. Monitor\AdvRepFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\3. Monitor\AdvRepFrm.Designer.cs">
+      <DependentUpon>AdvRepFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\3. Monitor\BasicRepFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\3. Monitor\BasicRepFrm.Designer.cs">
+      <DependentUpon>BasicRepFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\2. Planning\AsinchProcFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\2. Planning\AsinchProcFrm.Designer.cs">
+      <DependentUpon>AsinchProcFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\5. Admin\IfsBomCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\5. Admin\IfsBomCtrl.Designer.cs">
+      <DependentUpon>IfsBomCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\2. Planning\IfsDailyProcCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\2. Planning\IfsDailyProcCtrl.Designer.cs">
+      <DependentUpon>IfsDailyProcCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\4. Tools\IfsAnalogCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\4. Tools\IfsAnalogCtrl.Designer.cs">
+      <DependentUpon>IfsAnalogCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\2. Planning\AutomatFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\2. Planning\AutomatFrm.Designer.cs">
+      <DependentUpon>AutomatFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\2. Planning\DailyProcFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\2. Planning\DailyProcFrm.Designer.cs">
+      <DependentUpon>DailyProcFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\2. Planning\DistribFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\2. Planning\DistribFrm.Designer.cs">
+      <DependentUpon>DistribFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\3. Monitor\LogRepFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\3. Monitor\LogRepFrm.Designer.cs">
+      <DependentUpon>LogRepFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\3. Monitor\MonitorFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\3. Monitor\MonitorFrm.Designer.cs">
+      <DependentUpon>MonitorFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\4. Tools\MktIntelFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\4. Tools\MktIntelFrm.Designer.cs">
+      <DependentUpon>MktIntelFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\4. Tools\LabsFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\4. Tools\LabsFrm.Designer.cs">
+      <DependentUpon>LabsFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\5. Admin\MesUnitsFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\5. Admin\MesUnitsFrm.Designer.cs">
+      <DependentUpon>MesUnitsFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\1. General and Analysis\LoginFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\1. General and Analysis\LoginFrm.Designer.cs">
+      <DependentUpon>LoginFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\1. General and Analysis\MainFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\1. General and Analysis\MainFrm.Designer.cs">
+      <DependentUpon>MainFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\1. General and Analysis\SplashScreenFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\1. General and Analysis\SplashScreenFrm.Designer.cs">
+      <DependentUpon>SplashScreenFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\5. Admin\HelpFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\5. Admin\HelpFrm.Designer.cs">
+      <DependentUpon>HelpFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\5. Admin\IfsParamCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\5. Admin\IfsParamCtrl.Designer.cs">
+      <DependentUpon>IfsParamCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\1. Analysis\IfsPlanningGridCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\1. Analysis\IfsPlanningGridCtrl.Designer.cs">
+      <DependentUpon>IfsPlanningGridCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\1. Analysis\IfsPropCardCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\1. Analysis\IfsPropCardCtrl.Designer.cs">
+      <DependentUpon>IfsPropCardCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\2. Planning\IfsPurchaseCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\2. Planning\IfsPurchaseCtrl.Designer.cs">
+      <DependentUpon>IfsPurchaseCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\1. Analysis\IfsSelectorCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\1. Analysis\IfsSelectorCtrl.Designer.cs">
+      <DependentUpon>IfsSelectorCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\1. Analysis\IfsSeriesChartCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\1. Analysis\IfsSeriesChartCtrl.Designer.cs">
+      <DependentUpon>IfsSeriesChartCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\1. Analysis\IfsSeriesGridCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\1. Analysis\IfsSeriesGridCtrl.Designer.cs">
+      <DependentUpon>IfsSeriesGridCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\4. Tools\IfsClassifCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\4. Tools\IfsClassifCtrl.Designer.cs">
+      <DependentUpon>IfsClassifCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\5. Admin\IfsDataBasesCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\5. Admin\IfsDataBasesCtrl.Designer.cs">
+      <DependentUpon>IfsDataBasesCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\5. Admin\IfsMesUnitCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\5. Admin\IfsMesUnitCtrl.Designer.cs">
+      <DependentUpon>IfsMesUnitCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\4. Tools\IfsMktIntelCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\4. Tools\IfsMktIntelCtrl.Designer.cs">
+      <DependentUpon>IfsMktIntelCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\2. Planning\IfsScriptCntrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\2. Planning\IfsScriptCntrl.Designer.cs">
+      <DependentUpon>IfsScriptCntrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\4. Tools\IfsSearchCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\4. Tools\IfsSearchCtrl.Designer.cs">
+      <DependentUpon>IfsSearchCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\5. Admin\IfsSqlQueryCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\5. Admin\IfsSqlQueryCtrl.Designer.cs">
+      <DependentUpon>IfsSqlQueryCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\5. Admin\IfsDataViewCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\5. Admin\IfsDataViewCtrl.Designer.cs">
+      <DependentUpon>IfsDataViewCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\5. Admin\IfsUsersCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\5. Admin\IfsUsersCtrl.Designer.cs">
+      <DependentUpon>IfsUsersCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\4. Tools\IfsVarLtCtl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\4. Tools\IfsVarLtCtl.Designer.cs">
+      <DependentUpon>IfsVarLtCtl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\4. Tools\IfsBudgetingCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\4. Tools\IfsBudgetingCtrl.Designer.cs">
+      <DependentUpon>IfsBudgetingCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\4. Tools\IfsElastCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\4. Tools\IfsElastCtrl.Designer.cs">
+      <DependentUpon>IfsElastCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\4. Tools\IfsFactorsCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\4. Tools\IfsFactorsCtrl.Designer.cs">
+      <DependentUpon>IfsFactorsCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\4. Tools\IfsSimCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\4. Tools\IfsSimCtrl.Designer.cs">
+      <DependentUpon>IfsSimCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\3. Monitor\IfsAutomatCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\3. Monitor\IfsAutomatCtrl.Designer.cs">
+      <DependentUpon>IfsAutomatCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\5. Admin\IfsTransportsCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\5. Admin\IfsTransportsCtrl.Designer.cs">
+      <DependentUpon>IfsTransportsCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\5. Admin\IfsVisualCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\5. Admin\IfsVisualCtrl.Designer.cs">
+      <DependentUpon>IfsVisualCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\5. Admin\IfsWindowsCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\5. Admin\IfsWindowsCtrl.Designer.cs">
+      <DependentUpon>IfsWindowsCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\3. Monitor\IfsBasicRepCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\3. Monitor\IfsBasicRepCtrl.Designer.cs">
+      <DependentUpon>IfsBasicRepCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\3. Monitor\IfsLogsCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\3. Monitor\IfsLogsCtrl.Designer.cs">
+      <DependentUpon>IfsLogsCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\3. Monitor\IfsMonitorCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\3. Monitor\IfsMonitorCtrl.Designer.cs">
+      <DependentUpon>IfsMonitorCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\3. Monitor\IfsWarningsCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\3. Monitor\IfsWarningsCtrl.Designer.cs">
+      <DependentUpon>IfsWarningsCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\4. Tools\IfsOptimCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\4. Tools\IfsOptimCtrl.Designer.cs">
+      <DependentUpon>IfsOptimCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\2. Planning\ProcControlFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\2. Planning\ProcControlFrm.Designer.cs">
+      <DependentUpon>ProcControlFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\4. Tools\OptimFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\4. Tools\OptimFrm.Designer.cs">
+      <DependentUpon>OptimFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\5. Admin\ParamsFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\5. Admin\ParamsFrm.Designer.cs">
+      <DependentUpon>ParamsFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\6. Helpers\PlanningViewGen.cs" />
+    <Compile Include="Controls\6. Helpers\IfsVGridCtrl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\5. Admin\IfsCalendarCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\5. Admin\IfsCalendarCtrl.Designer.cs">
+      <DependentUpon>IfsCalendarCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\6. Helpers\IfsTreeCtrl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\5. Admin\IfsUpdateCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\5. Admin\IfsUpdateCtrl.Designer.cs">
+      <DependentUpon>IfsUpdateCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\5. Admin\TimetableFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\5. Admin\TimetableFrm.Designer.cs">
+      <DependentUpon>TimetableFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="General\PrintRibbonControllerResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrintRibbonControllerResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="General\Program.cs" />
+    <Compile Include="Controls\2. Planning\IfsDistCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\2. Planning\IfsDistCtrl.Designer.cs">
+      <DependentUpon>IfsDistCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\4. Tools\IfsLabs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\4. Tools\IfsLabs.Designer.cs">
+      <DependentUpon>IfsLabs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Forms\5. Admin\UpdateFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\5. Admin\UpdateFrm.Designer.cs">
+      <DependentUpon>UpdateFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\6. Helpers\TreeData.cs" />
+    <Compile Include="Forms\2. Planning\PurchaseFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\2. Planning\PurchaseFrm.Designer.cs">
+      <DependentUpon>PurchaseFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\2. Planning\ScriptingFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\2. Planning\ScriptingFrm.Designer.cs">
+      <DependentUpon>ScriptingFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\5. Admin\SqlQueryFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\5. Admin\SqlQueryFrm.Designer.cs">
+      <DependentUpon>SqlQueryFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\3. Monitor\WarningsFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\3. Monitor\WarningsFrm.Designer.cs">
+      <DependentUpon>WarningsFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\4. Tools\SimFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\4. Tools\SimFrm.Designer.cs">
+      <DependentUpon>SimFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\5. Admin\SupChainFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\5. Admin\SupChainFrm.Designer.cs">
+      <DependentUpon>SupChainFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\5. Admin\TransportFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\5. Admin\TransportFrm.Designer.cs">
+      <DependentUpon>TransportFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\5. Admin\UsersFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\5. Admin\UsersFrm.Designer.cs">
+      <DependentUpon>UsersFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\5. Admin\VisualFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\5. Admin\VisualFrm.Designer.cs">
+      <DependentUpon>VisualFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\5. Admin\WindowsFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\5. Admin\WindowsFrm.Designer.cs">
+      <DependentUpon>WindowsFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="General\XRDesignRibbonControllerResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>XRDesignRibbonControllerResources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Controls\1. Analysis\IfsOrderTimetable.resx">
+      <DependentUpon>IfsOrderTimetable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\1. Analysis\IfsSubSkusCtrl.resx">
+      <DependentUpon>IfsSubSkusCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\2. Planning\DialogFrm.resx">
+      <DependentUpon>DialogFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\5. Admin\IfsDBImportCtrl.resx">
+      <DependentUpon>IfsDBImportCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\5. Admin\IfsOrderTimetableCtrl.resx">
+      <DependentUpon>IfsOrderTimetableCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\6. Helpers\CellInfoFrm.resx">
+      <DependentUpon>CellInfoFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\6. Helpers\MailFrm.resx">
+      <DependentUpon>MailFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\6. Helpers\SpSheetFrm.resx">
+      <DependentUpon>SpSheetFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\5. Admin\AboutFrm.resx">
+      <DependentUpon>AboutFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\1. Analysis\IfsSimFcstCtrl.resx">
+      <DependentUpon>IfsSimFcstCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\2. Planning\IfsPurchaseCtrl.resx">
+      <DependentUpon>IfsPurchaseCtrl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\4. Tools\IfsLabs.resx">
+      <DependentUpon>IfsLabs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\5. Admin\IfsBomCtrl.resx">
+      <DependentUpon>IfsBomCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\2. Planning\IfsDailyProcCtrl.resx">
+      <DependentUpon>IfsDailyProcCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\5. Admin\IfsParamCtrl.resx">
+      <DependentUpon>IfsParamCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\1. Analysis\IfsPlanningGridCtrl.resx">
+      <DependentUpon>IfsPlanningGridCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\1. Analysis\IfsPropCardCtrl.resx">
+      <DependentUpon>IfsPropCardCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\1. Analysis\IfsSelectorCtrl.resx">
+      <DependentUpon>IfsSelectorCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\1. Analysis\IfsSeriesChartCtrl.resx">
+      <DependentUpon>IfsSeriesChartCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\1. Analysis\IfsSeriesGridCtrl.resx">
+      <DependentUpon>IfsSeriesGridCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\3. Monitor\IfsAdvRepCtrl.resx">
+      <DependentUpon>IfsAdvRepCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\4. Tools\IfsAnalogCtrl.resx">
+      <DependentUpon>IfsAnalogCtrl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\3. Monitor\IfsAutomatCtrl.resx">
+      <DependentUpon>IfsAutomatCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\5. Admin\IfsBackupCtrl.resx">
+      <DependentUpon>IfsBackupCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\3. Monitor\IfsBasicRepCtrl.resx">
+      <DependentUpon>IfsBasicRepCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\4. Tools\IfsBudgetingCtrl.resx">
+      <DependentUpon>IfsBudgetingCtrl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\5. Admin\IfsCalendarCtrl.resx">
+      <DependentUpon>IfsCalendarCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\4. Tools\IfsClassifCtrl.resx">
+      <DependentUpon>IfsClassifCtrl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\5. Admin\IfsDataBasesCtrl.resx">
+      <DependentUpon>IfsDataBasesCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\4. Tools\IfsElastCtrl.resx">
+      <DependentUpon>IfsElastCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\4. Tools\IfsFactorsCtrl.resx">
+      <DependentUpon>IfsFactorsCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\3. Monitor\IfsLogsCtrl.resx">
+      <DependentUpon>IfsLogsCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\5. Admin\IfsMesUnitCtrl.resx">
+      <DependentUpon>IfsMesUnitCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\4. Tools\IfsMktIntelCtrl.resx">
+      <DependentUpon>IfsMktIntelCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\3. Monitor\IfsMonitorCtrl.resx">
+      <DependentUpon>IfsMonitorCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\4. Tools\IfsOptimCtrl.resx">
+      <DependentUpon>IfsOptimCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\2. Planning\IfsProcControlCtrl.resx">
+      <DependentUpon>IfsProcControlCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\2. Planning\IfsScriptCntrl.resx">
+      <DependentUpon>IfsScriptCntrl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\4. Tools\IfsSearchCtrl.resx">
+      <DependentUpon>IfsSearchCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\4. Tools\IfsSimCtrl.resx">
+      <DependentUpon>IfsSimCtrl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\5. Admin\IfsSqlQueryCtrl.resx">
+      <DependentUpon>IfsSqlQueryCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\5. Admin\IfsDataViewCtrl.resx">
+      <DependentUpon>IfsDataViewCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\5. Admin\IfsTransportsCtrl.resx">
+      <DependentUpon>IfsTransportsCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\5. Admin\IfsUpdateCtrl.resx">
+      <DependentUpon>IfsUpdateCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\5. Admin\IfsUsersCtrl.resx">
+      <DependentUpon>IfsUsersCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\4. Tools\IfsVarLtCtl.resx">
+      <DependentUpon>IfsVarLtCtl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\5. Admin\IfsVisualCtrl.resx">
+      <DependentUpon>IfsVisualCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\3. Monitor\IfsWarningsCtrl.resx">
+      <DependentUpon>IfsWarningsCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\5. Admin\IfsWindowsCtrl.resx">
+      <DependentUpon>IfsWindowsCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\3. Monitor\AdvRepFrm.resx">
+      <DependentUpon>AdvRepFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\4. Tools\AnalogFrm.resx">
+      <DependentUpon>AnalogFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\1. General and Analysis\AnalysisFrm.resx">
+      <DependentUpon>AnalysisFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\2. Planning\AsinchProcFrm.resx">
+      <DependentUpon>AsinchProcFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\2. Planning\AutomatFrm.resx">
+      <DependentUpon>AutomatFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\5. Admin\BackupFrm.resx">
+      <DependentUpon>BackupFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\3. Monitor\BasicRepFrm.resx">
+      <DependentUpon>BasicRepFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\5. Admin\BomListFrm.resx">
+      <DependentUpon>BomListFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\4. Tools\BudgetFrm.resx">
+      <DependentUpon>BudgetFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\5. Admin\CalendarFrm.resx">
+      <DependentUpon>CalendarFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\4. Tools\ClassifFrm.resx">
+      <DependentUpon>ClassifFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\2. Planning\DailyProcFrm.resx">
+      <DependentUpon>DailyProcFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\5. Admin\DataBasesFrm.resx">
+      <DependentUpon>DataBasesFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\5. Admin\DataViewFrm.resx">
+      <DependentUpon>DataViewFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\2. Planning\DistribFrm.resx">
+      <DependentUpon>DistribFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\4. Tools\ElastFrm.resx">
+      <DependentUpon>ElastFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\4. Tools\FactorsFrm.resx">
+      <DependentUpon>FactorsFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\4. Tools\LabsFrm.resx">
+      <DependentUpon>LabsFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\3. Monitor\LogRepFrm.resx">
+      <DependentUpon>LogRepFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\5. Admin\DBImportFrm.resx">
+      <DependentUpon>DBImportFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\5. Admin\MesUnitsFrm.resx">
+      <DependentUpon>MesUnitsFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\4. Tools\MktIntelFrm.resx">
+      <DependentUpon>MktIntelFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\3. Monitor\MonitorFrm.resx">
+      <DependentUpon>MonitorFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\4. Tools\OptimFrm.resx">
+      <DependentUpon>OptimFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\5. Admin\ParamsFrm.resx">
+      <DependentUpon>ParamsFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\2. Planning\ProcControlFrm.resx">
+      <DependentUpon>ProcControlFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\2. Planning\PurchaseFrm.resx">
+      <DependentUpon>PurchaseFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\2. Planning\ScriptingFrm.resx">
+      <DependentUpon>ScriptingFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\4. Tools\SimFrm.resx">
+      <DependentUpon>SimFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\5. Admin\SqlQueryFrm.resx">
+      <DependentUpon>SqlQueryFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\5. Admin\SupChainFrm.resx">
+      <DependentUpon>SupChainFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\5. Admin\TimetableFrm.resx">
+      <DependentUpon>TimetableFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\5. Admin\TransportFrm.resx">
+      <DependentUpon>TransportFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\5. Admin\UsersFrm.resx">
+      <DependentUpon>UsersFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\5. Admin\VisualFrm.resx">
+      <DependentUpon>VisualFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\3. Monitor\WarningsFrm.resx">
+      <DependentUpon>WarningsFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\5. Admin\WindowsFrm.resx">
+      <DependentUpon>WindowsFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\5. Admin\HelpFrm.resx">
+      <DependentUpon>HelpFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\1. General and Analysis\LoginFrm.resx">
+      <DependentUpon>LoginFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\1. General and Analysis\MainFrm.resx">
+      <DependentUpon>MainFrm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\1. General and Analysis\SplashScreenFrm.resx">
+      <DependentUpon>SplashScreenFrm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\5. Admin\UpdateFrm.resx">
+      <DependentUpon>UpdateFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\6. Helpers\IfsTreeCtrl.resx" />
+    <EmbeddedResource Include="General\PrintRibbonControllerResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>PrintRibbonControllerResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\2. Planning\IfsDistCtrl.resx">
+      <DependentUpon>IfsDistCtrl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="General\XRDesignRibbonControllerResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XRDesignRibbonControllerResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessModel\BusinessModel.csproj">
+      <Project>{3d07a898-f7c0-460e-9366-ad7b632d3e1d}</Project>
+      <Name>BusinessModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Kernel\KernelWrapp.csproj">
+      <Project>{9d72b426-1112-4792-b978-1ac661dcfd95}</Project>
+      <Name>KernelWrapp</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ok.bmp" />
+    <None Include="Resources\dataBases.jpg" />
+    <Content Include="Resources\databasesDis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SqlServer.SqlLocalDB.11.1">
+      <Visible>False</Visible>
+      <ProductName>SQL Server 2012 Express LocalDB</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
