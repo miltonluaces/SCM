@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E0AA09C8-DB29-46CF-9457-0A6230B876AA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Statistics</RootNamespace>
+    <AssemblyName>aish</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ABMath">
+      <HintPath>..\..\External\Stats\ABMath.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Clustering\Cluster.cs" />
+    <Compile Include="Clustering\ClusteringCalc.cs" />
+    <Compile Include="Clustering\Dendrogram.cs" />
+    <Compile Include="Clustering\HierarchicalClustering.cs" />
+    <Compile Include="Clustering\HomogeneityClustering.cs" />
+    <Compile Include="Clustering\KDTree.cs" />
+    <Compile Include="Clustering\KMC.cs" />
+    <Compile Include="Clustering\LinealClustering.cs" />
+    <Compile Include="Clustering\StationarityClustering.cs" />
+    <Compile Include="Clustering\Value.cs" />
+    <Compile Include="Distributions\BetaBinomial.cs" />
+    <Compile Include="Distributions\BetaDistrib.cs" />
+    <Compile Include="Distributions\DirichletDistrib.cs" />
+    <Compile Include="Distributions\DirichletMultinomialDistrib.cs" />
+    <Compile Include="Distributions\DiscreteDistrib.cs" />
+    <Compile Include="Distributions\MultinomialDistrib.cs" />
+    <Compile Include="Distributions\NormalDistrib.cs" />
+    <Compile Include="Distributions\PoissonDistrib.cs" />
+    <Compile Include="Forecast\ARIMAFcst.cs" />
+    <Compile Include="Forecast\HoltWintersFcst.cs" />
+    <Compile Include="Forecast\NaiveFcst.cs" />
+    <Compile Include="Forecast\RegressionFcst.cs" />
+    <Compile Include="Forecast\ZChartFcst.cs" />
+    <Compile Include="Stats\AdditStatFunctions.cs" />
+    <Compile Include="Stats\Frequencies.cs" />
+    <Compile Include="Stats\KernelDensity.cs" />
+    <Compile Include="Stats\Norma.cs" />
+    <Compile Include="Stats\OutlierAnalysis.cs" />
+    <Compile Include="Stats\StatRndGenerator.cs" />
+    <Compile Include="Stats\StatFunctions.cs" />
+    <Compile Include="Stats\Histogram.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Stats\HypothesisTest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Library\Iridium.csproj">
+      <Project>{26fc15de-efda-403a-8284-1e2a4ae8a9d8}</Project>
+      <Name>Iridium</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Maths\Maths.csproj">
+      <Project>{79A3EC04-2FC6-4F04-81A4-68FFD42A996F}</Project>
+      <Name>Maths</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
